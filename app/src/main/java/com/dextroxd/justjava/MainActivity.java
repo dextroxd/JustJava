@@ -60,12 +60,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String createOrderSummary(int x, boolean y, boolean z, String n) {
-        String name = "Name : " + n;
-        String wc = "Add whipped cream?" + y;
-        String ch = "Add chocolate?" + z;
-        String Quant = "Quantity : " + noc;
-        String priceMessage = "Total : $" + x;
-        String p = name + "\n" + wc + "\n" + ch + "\n" + Quant + "\n" + priceMessage;
+        String name = getString(R.string.order_summary_name,n);
+        String wc = getString(R.string.addwhipped) + y;
+        String ch = getString(R.string.addchocolate) + z;
+        String Quant = getString(R.string.Quantity)+": " + noc;
+        String priceMessage = getString(R.string.total) + x;
+        String thanks = "\n"+getString(R.string.Thank_You);
+        String p = name + "\n" + wc + "\n" + ch + "\n" + Quant + "\n" + priceMessage+thanks;
         return p;
     }
 
