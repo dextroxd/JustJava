@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         String wc = getString(R.string.addwhipped) + y;
         String ch = getString(R.string.addchocolate) + z;
         String Quant = getString(R.string.Quantity)+": " + noc;
-        String priceMessage = getString(R.string.total) + x;
+        String priceMessage = getString(R.string.total)+NumberFormat.getCurrencyInstance().format(x);
         String thanks = "\n"+getString(R.string.Thank_You);
         String p = name + "\n" + wc + "\n" + ch + "\n" + Quant + "\n" + priceMessage+thanks;
         return p;
