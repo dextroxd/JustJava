@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         String priceMessage = getString(R.string.total)+NumberFormat.getCurrencyInstance().format(x);
         String thanks = "\n"+getString(R.string.Thank_You);
         String p = name + "\n" + wc + "\n" + ch + "\n" + Quant + "\n" + priceMessage+thanks;
-        return p;
+        return p+"HelloWorld";
     }
 
     public void increase(View view) {
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         display(noc);
     }
 
-    public void decrease(View view) {
+    public void decrease(View view1) {
         if (noc > 1) {
             noc--;
         } else {
